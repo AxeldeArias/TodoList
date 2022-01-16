@@ -13,23 +13,6 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		6172F2D35A4C3AA820D92908 /* libPods-TodoList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6423831EA8574132BED9D8CC /* libPods-TodoList.a */; };
 		7EF68E3733C33B6898317E18 /* libPods-TodoList-TodoListTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE59519B596E51CEFDCCC0 /* libPods-TodoList-TodoListTests.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		E19866DF278B63C900A2C102 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E19866CF278B63C900A2C102 /* Fontisto.ttf */; };
-		E19866E0278B63C900A2C102 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E19866D0278B63C900A2C102 /* Octicons.ttf */; };
-		E19866E1278B63C900A2C102 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E19866D1278B63C900A2C102 /* Feather.ttf */; };
-		E19866E2278B63C900A2C102 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E19866D2278B63C900A2C102 /* Entypo.ttf */; };
-		E19866E3278B63C900A2C102 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E19866D3278B63C900A2C102 /* FontAwesome5_Brands.ttf */; };
-		E19866E4278B63C900A2C102 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E19866D4278B63C900A2C102 /* MaterialCommunityIcons.ttf */; };
-		E19866E5278B63C900A2C102 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E19866D5278B63C900A2C102 /* AntDesign.ttf */; };
-		E19866E6278B63C900A2C102 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E19866D6278B63C900A2C102 /* Foundation.ttf */; };
-		E19866E7278B63C900A2C102 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E19866D7278B63C900A2C102 /* Ionicons.ttf */; };
-		E19866E8278B63C900A2C102 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E19866D8278B63C900A2C102 /* FontAwesome5_Solid.ttf */; };
-		E19866E9278B63C900A2C102 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E19866D9278B63C900A2C102 /* FontAwesome5_Regular.ttf */; };
-		E19866EA278B63C900A2C102 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E19866DA278B63C900A2C102 /* FontAwesome.ttf */; };
-		E19866EB278B63C900A2C102 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E19866DB278B63C900A2C102 /* Zocial.ttf */; };
-		E19866EC278B63C900A2C102 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E19866DC278B63C900A2C102 /* EvilIcons.ttf */; };
-		E19866ED278B63C900A2C102 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E19866DD278B63C900A2C102 /* SimpleLineIcons.ttf */; };
-		E19866EE278B63C900A2C102 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E19866DE278B63C900A2C102 /* MaterialIcons.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,7 +199,6 @@
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				077E01280D4B4AD18B2E1770 /* [CP] Embed Pods Frameworks */,
 				4E62BDF20514810D028A5FBF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -239,7 +221,6 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				C8AC78B0264D0F9F6F6D630E /* [CP] Embed Pods Frameworks */,
 				ADC9DDC32298B72B3CF5DC8E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -299,23 +280,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E19866DF278B63C900A2C102 /* Fontisto.ttf in Resources */,
-				E19866EA278B63C900A2C102 /* FontAwesome.ttf in Resources */,
-				E19866E6278B63C900A2C102 /* Foundation.ttf in Resources */,
-				E19866E9278B63C900A2C102 /* FontAwesome5_Regular.ttf in Resources */,
-				E19866E7278B63C900A2C102 /* Ionicons.ttf in Resources */,
-				E19866EC278B63C900A2C102 /* EvilIcons.ttf in Resources */,
-				E19866E2278B63C900A2C102 /* Entypo.ttf in Resources */,
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
-				E19866EB278B63C900A2C102 /* Zocial.ttf in Resources */,
-				E19866ED278B63C900A2C102 /* SimpleLineIcons.ttf in Resources */,
-				E19866E1278B63C900A2C102 /* Feather.ttf in Resources */,
-				E19866E0278B63C900A2C102 /* Octicons.ttf in Resources */,
-				E19866E3278B63C900A2C102 /* FontAwesome5_Brands.ttf in Resources */,
-				E19866E5278B63C900A2C102 /* AntDesign.ttf in Resources */,
-				E19866EE278B63C900A2C102 /* MaterialIcons.ttf in Resources */,
-				E19866E8278B63C900A2C102 /* FontAwesome5_Solid.ttf in Resources */,
-				E19866E4278B63C900A2C102 /* MaterialCommunityIcons.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,23 +300,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
-		};
-		077E01280D4B4AD18B2E1770 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TodoList-TodoListTests/Pods-TodoList-TodoListTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TodoList-TodoListTests/Pods-TodoList-TodoListTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TodoList-TodoListTests/Pods-TodoList-TodoListTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		3E482C27206C4DEF2FE45063 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -430,23 +377,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TodoList/Pods-TodoList-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C8AC78B0264D0F9F6F6D630E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TodoList/Pods-TodoList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TodoList/Pods-TodoList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TodoList/Pods-TodoList-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {

@@ -1,10 +1,19 @@
 import React from 'react'
-import { SafeAreaView } from 'react-native'
+import { Provider } from 'react-redux'
+import store from './src/domain/store'
+import TodoListApp from './src/TodoListApp'
+import Reactotron from 'reactotron-react-native'
+
+Reactotron
+  .configure() // controls connection & communication settings
+  .useReactNative() // add all built-in react native plugins
+  .connect() // let's connect!
 
 const App = () => {
   return (
-    <SafeAreaView>
-    </SafeAreaView>
+    <Provider store={store}>
+      <TodoListApp />
+    </Provider>
   )
 }
 
