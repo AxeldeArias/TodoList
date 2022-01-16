@@ -9,7 +9,7 @@ type State = {
   error: string,
 }
 
-const initialState: State = {
+export const taskSliceState: State = {
   tasks: [],
   loading: false,
   error: ''
@@ -17,7 +17,7 @@ const initialState: State = {
 
 export const tasksSlice = createSlice({
   name: 'task',
-  initialState,
+  initialState: taskSliceState,
   reducers: {},
   extraReducers: builder => {
     builder

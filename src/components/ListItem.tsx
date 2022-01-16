@@ -6,15 +6,17 @@ type ListItemProps = {
   title: string,
   iconName: string,
   onPress?: () => void,
-  disabled?: boolean
+  disabled?: boolean,
+  testID?: string
 }
 
-const ListItem = ({ title, iconName, onPress, disabled }: ListItemProps) => {
+const ListItem = ({ title, iconName, onPress, disabled, testID }: ListItemProps) => {
   return (
     <TouchableOpacity
       style={styles.itemContainer}
       onPress={onPress}
       disabled={disabled}
+      testID={testID}
     >
       <View style={styles.textItemContainer}>
         <Text

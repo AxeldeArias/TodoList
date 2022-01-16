@@ -13,6 +13,8 @@ const ErrorModal = () => {
       visible={open}
       onClose={closeErrorModal}
       title={title}
+      testID='ErrorModal'
+
       image={require('../assets/lost-connection.png')}
     />
   )

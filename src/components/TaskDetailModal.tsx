@@ -48,6 +48,7 @@ const CurrentTaskModal = () => {
       visible={!!currentTask}
       onRequestClose={removeCurrentTask}
       animationType="slide"
+      testID='TaskDetailModalID'
     >
       <SafeAreaView style={styles.screen}>
 
@@ -56,6 +57,7 @@ const CurrentTaskModal = () => {
           <View style={styles.body}>
             <Text style={styles.title}>Title</Text>
             <TextInput
+              testID='TaskDetailModal.titleInput'
               numberOfLines={1}
               style={styles.titleInput}
               maxLength={60}
@@ -92,6 +94,7 @@ const CurrentTaskModal = () => {
               multiline={true}
               numberOfLines={8}
               value={currentTask?.description}
+              testID='TaskDetailModal.description'
               onChangeText={(text) => {
                 validateForm(() => {
                   updateCurrentTask({ description: text })
@@ -109,6 +112,7 @@ const CurrentTaskModal = () => {
                   containerStyle={styles.button}
                   disabled={loading}
                   title={'Update Task'}
+                  testID="TaskDetailModal.updateTask"
                   onPress={() => {
                     validateForm(() => {
                       handleUpdateTask()
@@ -120,6 +124,7 @@ const CurrentTaskModal = () => {
                   disabled={loading}
                   inverted
                   title={'Delete Task'}
+                  testID="TaskDetailModal.deleteTask"
                   onPress={handleDeleteTask}
                 />
               </>
@@ -128,6 +133,7 @@ const CurrentTaskModal = () => {
                 containerStyle={styles.button}
                 disabled={loading}
                 title={'Create Task'}
+                testID="TaskDetailModal.createTask"
                 onPress={() => {
                   validateForm(() => {
                     handleCreateTask()

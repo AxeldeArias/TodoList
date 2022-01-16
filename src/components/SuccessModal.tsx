@@ -13,6 +13,7 @@ const SuccessModal = () => {
       visible={isOpen}
       onClose={closeSuccessModal}
       title={title}
+      testID='SuccessModal'
       image={require('../assets/success.jpeg')}
     />
   )

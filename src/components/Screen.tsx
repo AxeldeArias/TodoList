@@ -18,7 +18,7 @@ const Screen = ({ children, loading, style }: ScreenProps) => {
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size={30} />
+        <ActivityIndicator size={30} testID="Loading" />
       </View>
     )
   }

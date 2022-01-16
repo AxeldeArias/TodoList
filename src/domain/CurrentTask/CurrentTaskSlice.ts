@@ -6,13 +6,13 @@ type State = {
  currentTask: null | Partial<TaskItem>
 }
 
-const initialState: State = {
+export const currentTaskState: State = {
   currentTask: null
 }
 
 export const currentTaskSlice = createSlice({
   name: 'currentTask',
-  initialState,
+  initialState: currentTaskState,
   reducers: {
     setCurrentTask (state, { payload }: PayloadAction<Partial<TaskItem> | null>) {
       state.currentTask = payload

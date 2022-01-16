@@ -6,17 +6,17 @@ type State = {
   open: boolean,
 }
 
-const initialState: State = {
-  title: 'Algo salió mal',
+export const errorState: State = {
+  title: 'Something was wrong',
   open: false
 }
 
 export const errorSlice = createSlice({
   name: 'error',
-  initialState,
+  initialState: errorState,
   reducers: {
     openErrorModal (state, { payload }: PayloadAction<string | undefined>) {
-      state.title = payload || initialState.title
+      state.title = payload || errorState.title
       state.open = true
     },
     closeErrorModal (state) {

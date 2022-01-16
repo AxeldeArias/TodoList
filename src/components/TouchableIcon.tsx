@@ -6,18 +6,21 @@ import { Colors } from '../utils/Colors'
 type TouchableIconProps = {
   onPress: () => void;
   iconName: string,
-  containerStyle: StyleProp<ViewStyle>
+  containerStyle: StyleProp<ViewStyle>,
+  testID?: string
 }
 
 const TouchableIcon = ({
   onPress,
   iconName,
-  containerStyle
+  containerStyle,
+  testID
 }: TouchableIconProps) => {
   return (
     <TouchableOpacity
       style={[styles.container, containerStyle]}
       onPress={onPress}
+      testID={testID}
     >
       <Icon name={iconName} size={30} color="black" />
     </TouchableOpacity>

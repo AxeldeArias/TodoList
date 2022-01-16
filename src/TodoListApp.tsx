@@ -36,6 +36,7 @@ const TodoListApp = () => {
         tasks.map((item) => (
           <Task
             key={item.id}
+            testID={`task-${item.id}`}
             disabled={loading}
             title={item.title}
             state={item.state}
@@ -48,8 +49,9 @@ const TodoListApp = () => {
 
       <TouchableIcon
         containerStyle={styles.addCurrentTaskIcon}
-        onPress={() => setCurrentTask()}
+        onPress={setCurrentTask}
         iconName="plus"
+        testID="AddNewTaskButton"
       />
 
       <CurrentTaskModal />

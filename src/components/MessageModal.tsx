@@ -7,9 +7,10 @@ type MessageModalProps = {
   onClose: () => void,
   title: string,
   image: ImageSourcePropType,
+  testID?: string,
 }
 
-const MessageModal = ({ visible, onClose, title, image }: MessageModalProps) => {
+const MessageModal = ({ visible, onClose, title, image, testID }: MessageModalProps) => {
   const { width, height } = useWindowDimensions()
 
   return (
@@ -17,6 +18,7 @@ const MessageModal = ({ visible, onClose, title, image }: MessageModalProps) => 
       visible={visible}
       onRequestClose={onClose}
       animationType="slide"
+      testID={testID}
       transparent
       style={styles.modal}
     >

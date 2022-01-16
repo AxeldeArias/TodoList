@@ -6,17 +6,17 @@ type State = {
   isOpen: boolean,
 }
 
-const initialState: State = {
-  title: 'Algo salió mal',
+export const successState: State = {
+  title: 'Correct operation',
   isOpen: false
 }
 
 export const successSlice = createSlice({
   name: 'error',
-  initialState,
+  initialState: successState,
   reducers: {
     openSuccessModal (state, { payload }: PayloadAction<string | undefined>) {
-      state.title = payload || initialState.title
+      state.title = payload || successState.title
       state.isOpen = true
     },
     closeSuccessModal (state) {

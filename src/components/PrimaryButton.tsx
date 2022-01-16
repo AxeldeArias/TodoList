@@ -12,6 +12,7 @@ type PrimaryButtonProps = {
   disabled?: boolean,
   inverted?: boolean,
   containerStyle?: StyleProp<ViewStyle>,
+  testID?: string,
 }
 
 const PrimaryButton = ({
@@ -19,13 +20,15 @@ const PrimaryButton = ({
   containerStyle,
   onPress,
   disabled,
-  inverted
+  inverted,
+  testID
 }: PrimaryButtonProps) => {
   return (
     <TouchableOpacity
       style={[{ ...styles.container, ...(inverted && { backgroundColor: Colors.darkGrey }) }, containerStyle]}
       onPress={onPress}
       disabled={disabled}
+      testID={testID}
      >
       <Text style={styles.title}>{title}</Text>
     </TouchableOpacity>
