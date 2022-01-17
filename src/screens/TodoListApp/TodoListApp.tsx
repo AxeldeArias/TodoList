@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import { StyleSheet, Text } from 'react-native'
-import Task from './components/Task'
-import CurrentTaskModal from './components/TaskDetailModal'
-import Screen from './components/Screen'
-import ErrorModal from './components/ErrorModal'
-import useCurrentTask from './domain/CurrentTask/useCurrentTask'
-import TouchableIcon from './components/TouchableIcon'
-import useTasksService from './domain/Tasks/useTaskService'
-import SuccessModal from './components/SuccessModal'
+import Task from '../../components/Task'
+import CurrentTaskModal from '../../components/TaskDetailModal'
+import Screen from '../../components/Screen'
+import ErrorModal from '../../components/ErrorModal'
+import useCurrentTask from '../../domain/CurrentTask/useCurrentTask'
+import TouchableIcon from '../../components/TouchableIcon'
+import useTasksService from '../../domain/Tasks/useTaskService'
+import SuccessModal from '../../components/SuccessModal'
 
 const TodoListApp = () => {
   const { setCurrentTask } = useCurrentTask()
@@ -49,7 +49,9 @@ const TodoListApp = () => {
 
       <TouchableIcon
         containerStyle={styles.addCurrentTaskIcon}
-        onPress={setCurrentTask}
+        onPress={() => {
+          setCurrentTask()
+        }}
         iconName="plus"
         testID="AddNewTaskButton"
       />
@@ -75,8 +77,8 @@ const styles = StyleSheet.create({
   },
   addCurrentTaskIcon: {
     position: 'absolute',
-    right: 0,
-    bottom: 0
+    right: 10,
+    bottom: 15
   }
 })
 

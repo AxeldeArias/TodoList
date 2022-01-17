@@ -1,7 +1,7 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import store from './src/domain/store'
-import TodoListApp from './src/TodoListApp'
+import TodoListApp from './src/screens/TodoListApp/TodoListApp'
 import Reactotron from 'reactotron-react-native'
 
 Reactotron

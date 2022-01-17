@@ -96,9 +96,7 @@ const CurrentTaskModal = () => {
               value={currentTask?.description}
               testID='TaskDetailModal.description'
               onChangeText={(text) => {
-                validateForm(() => {
-                  updateCurrentTask({ description: text })
-                })
+                updateCurrentTask({ description: text })
               }}
             />
 
@@ -114,9 +112,7 @@ const CurrentTaskModal = () => {
                   title={'Update Task'}
                   testID="TaskDetailModal.updateTask"
                   onPress={() => {
-                    validateForm(() => {
-                      handleUpdateTask()
-                    })
+                    validateForm(handleUpdateTask)
                   }}
                 />
                 <PrimaryButton
@@ -135,9 +131,7 @@ const CurrentTaskModal = () => {
                 title={'Create Task'}
                 testID="TaskDetailModal.createTask"
                 onPress={() => {
-                  validateForm(() => {
-                    handleCreateTask()
-                  })
+                  validateForm(handleCreateTask)
                 }}
               />
             )

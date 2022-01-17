@@ -31,7 +31,8 @@ const MessageModal = ({ visible, onClose, title, image, testID }: MessageModalPr
           }}>
             <Image
               source={image}
-              style={{ ...styles.image, maxWidth: width * 0.8 }}
+              resizeMode='cover'
+              style={[styles.image, { width: width * 0.8 }]}
             />
             <View style={styles.footer}>
               <Text style={styles.title}>{title}</Text>
@@ -53,16 +54,16 @@ const styles = StyleSheet.create({
   footer: {
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20
+    padding: 20,
+    flexShrink: 0,
+    borderRadius: 9
   },
   title: {
     fontSize: 22,
     fontWeight: 'bold'
   },
   image: {
-    aspectRatio: 1,
-    flex: 1,
-    alignSelf: 'center'
+    flex: 1
   },
   card: {
     shadowColor: Colors.dark,
