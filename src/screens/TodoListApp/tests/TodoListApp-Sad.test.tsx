@@ -36,7 +36,7 @@ describe('When a user creates a task with api error', () => {
   })
 })
 
-describe('When a user update a task with api error', () => {
+describe('When a user updates a task with api error', () => {
   test('should see a error modal', async () => {
     server.use(rest.put(`${defaultConfig.baseURL}/task`, (_req, res, ctx) => {
       return res(
@@ -62,7 +62,7 @@ describe('When a user update a task with api error', () => {
   })
 })
 
-describe('When a user delete a task with api error', () => {
+describe('When a user deletes a task with api error', () => {
   test('should see a error modal', async () => {
     server.use(rest.delete(`${defaultConfig.baseURL}/task`, (_req, res, ctx) => {
       return res(

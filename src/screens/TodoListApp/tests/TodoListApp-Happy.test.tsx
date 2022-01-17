@@ -46,7 +46,7 @@ describe('When a user creates a task', () => {
   })
 })
 
-describe('When a user update a task', () => {
+describe('When a user updates a task', () => {
   test('should see a success modal', async () => {
     const newTaskTitle = 'Task udpated'
     const { screen, utils } = renderTodoListScreen()
@@ -66,7 +66,7 @@ describe('When a user update a task', () => {
   })
 })
 
-describe('When a user delete a task', () => {
+describe('When a user deletes a task', () => {
   test('should see a success modal', async () => {
     const taskToDelete = 'Study'
     const { screen, utils } = renderTodoListScreen()
