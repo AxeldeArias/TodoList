@@ -28,6 +28,31 @@ describe('When a user has tasks', () => {
   })
 })
 
+describe('When a user doesn\'t have any tasks', () => {
+  test('should see a summary and an empty list', async () => {
+    const { screen, utils } = renderTodoListScreen()
+
+    await utils.finishLoading()
+
+    expect(screen.queryByText('Hours Completed: 0'))
+    expect(screen.queryByText('Hours in Progress: 0'))
+    expect(screen.queryByText('Hours Planned: 0'))
+    expect(screen.queryByText("You don't have any tasks"))
+  })
+})
+
+describe('When a user has tasks', () => {
+  test('should see a summary', async () => {
+    const { screen, utils } = renderTodoListScreen()
+
+    await utils.finishLoading()
+
+    expect(screen.queryByText('Hours Completed: 10'))
+    expect(screen.queryByText('Hours in Progress: 2'))
+    expect(screen.queryByText('Hours Planned: 5'))
+  })
+})
+
 describe('When a user creates a task', () => {
   test('should see a success modal', async () => {
     const taskToCreate = 'New Task'

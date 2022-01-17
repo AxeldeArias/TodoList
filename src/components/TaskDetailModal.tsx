@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { View, Modal, SafeAreaView, TextInput, StyleSheet, Text } from 'react-native'
-import DatePickerInput from './DatePickerInput'
 import PrimaryButton from './PrimaryButton'
 import useTasksService from '../domain/Tasks/useTaskService'
 import Header from './Header'
@@ -31,7 +30,7 @@ const CurrentTaskModal = () => {
 
   const validateForm = (callback: () => void) => {
     if (!currentTask || !currentTask.title) {
-      setErrors({ ...errors, title: 'El titulo es obligatorio' })
+      setErrors({ ...errors, title: 'The title is required' })
     } else {
       return callback()
     }
@@ -42,7 +41,7 @@ const CurrentTaskModal = () => {
       setErrors(errorInitialValues)
     }
   }, [currentTask])
-
+  const [estimateValue, setEstimateValue] = useState('')
   return (
     <Modal
       visible={!!currentTask}
@@ -78,11 +77,17 @@ const CurrentTaskModal = () => {
               initialValue={currentTask?.state}
             />
 
-            <Text style={styles.title}>Estimated Date</Text>
-            <DatePickerInput
-              value={currentTask?.estimate}
+            <Text style={styles.title}>Estimate</Text>
+            <TextInput
+              numberOfLines={1}
+              style={styles.titleInput}
+              keyboardType="decimal-pad"
+              placeholder='Hours'
+              value={estimateValue}
               onChangeText={(text) => {
-                updateCurrentTask({ estimate: text })
+                setEstimateValue(text)
+                const estimateNumber = Number(text)
+                !isNaN(estimateNumber) && updateCurrentTask({ estimate: estimateNumber })
               }}
             />
 

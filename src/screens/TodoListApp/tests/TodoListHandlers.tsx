@@ -11,7 +11,28 @@ export const TodoListAppHandlers = [
           title: 'Study',
           description: 'Study maths',
           state: 'IN_PROGRESS',
-          estimate: '12/16/22'
+          estimate: 2
+        },
+        {
+          id: '2',
+          title: 'clean',
+          description: 'Clean the house',
+          state: 'PLANNED',
+          estimate: 5
+        },
+        {
+          id: '3',
+          title: 'Fix',
+          description: 'fix the computer',
+          state: 'COMPLETED',
+          estimate: 6
+        },
+        {
+          id: '4',
+          title: 'Read',
+          description: 'Read a book',
+          state: 'COMPLETED',
+          estimate: 10
         }
       ])
     )

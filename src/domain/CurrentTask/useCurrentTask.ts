@@ -13,7 +13,7 @@ const useCurrentTask = () => {
   const _setCurrentTask = (item: Partial<TaskItem> | null | undefined = {
     description: '',
     title: '',
-    estimate: '',
+    estimate: 0,
     state: 'PLANNED'
   }) => {
     dispatch(setCurrentTask(item))

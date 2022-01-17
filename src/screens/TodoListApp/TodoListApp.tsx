@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { StyleSheet, Text } from 'react-native'
-import Task from '../../components/Task'
 import CurrentTaskModal from '../../components/TaskDetailModal'
 import Screen from '../../components/Screen'
 import ErrorModal from '../../components/ErrorModal'
@@ -8,12 +7,14 @@ import useCurrentTask from '../../domain/CurrentTask/useCurrentTask'
 import TouchableIcon from '../../components/TouchableIcon'
 import useTasksService from '../../domain/Tasks/useTaskService'
 import SuccessModal from '../../components/SuccessModal'
+import TaskSummary from '../../components/TaskSummary'
+import { ScrollView } from 'react-native-gesture-handler'
+import TasksList from '../../components/TasksList'
 
 const TodoListApp = () => {
   const { setCurrentTask } = useCurrentTask()
 
   const {
-    tasks,
     loading,
     handleGetTasks
   } = useTasksService()
@@ -28,24 +29,15 @@ const TodoListApp = () => {
       style={styles.screen}
     >
 
-      <Text style={styles.title}>
-        Listado de Tareas
-      </Text>
+      <Text style={styles.title}>TODO APP</Text>
 
-      {
-        tasks.map((item) => (
-          <Task
-            key={item.id}
-            testID={`task-${item.id}`}
-            disabled={loading}
-            title={item.title}
-            state={item.state}
-            onPress={() => {
-              setCurrentTask(item)
-            }}
-          />
-        ))
-      }
+      <Text style={styles.subtitle}>Summary:</Text>
+      <TaskSummary containerStyle={styles.summary}/>
+
+      <Text style={styles.subtitle}>Tasks:</Text>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <TasksList />
+      </ScrollView>
 
       <TouchableIcon
         containerStyle={styles.addCurrentTaskIcon}
@@ -73,7 +65,16 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: 'bold',
+    textAlign: 'center',
     marginVertical: 15
+  },
+  summary: {
+    marginBottom: 25
+  },
+  subtitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 8
   },
   addCurrentTaskIcon: {
     position: 'absolute',
