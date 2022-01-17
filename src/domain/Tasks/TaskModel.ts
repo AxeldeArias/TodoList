@@ -9,7 +9,8 @@ export type TaskItem = {
 export type CreateTaskRequest = {
   title: string,
   description: string,
-  estimate: number
+  estimate: number,
+  state: TaskItem['state']
 }
 
 export type LogicDeleteRequest = {

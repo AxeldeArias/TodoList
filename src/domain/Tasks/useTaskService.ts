@@ -36,7 +36,8 @@ const useTasksService = () => {
     const result = await dispatch(createTask({
       title: currentTask?.title ?? '',
       description: currentTask?.description ?? '',
-      estimate: 'sin'
+      estimate: currentTask?.estimate ?? 0,
+      state: currentTask?.state ?? 'PLANNED'
     }))
 
     taskActionCallback({

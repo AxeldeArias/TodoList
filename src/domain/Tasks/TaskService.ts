@@ -5,7 +5,8 @@ import { CreateTaskRequest, LogicDeleteRequest, TaskItem } from './TaskModel'
 const create = async ({
   title,
   description,
-  estimate
+  estimate,
+  state
 }: CreateTaskRequest): Promise<TaskItem> => {
   const { data } = await Api.post<CreateTaskRequest, AxiosResponse<TaskItem>>('/task', {
     title,
@@ -18,7 +19,7 @@ const create = async ({
     id: title, // TODO: remove this line when unmock api
     title, // TODO: remove this line when unmock api
     description, // TODO: remove this line when unmock api
-    state: 'PLANNED', // TODO: remove this line when unmock api
+    state, // TODO: remove this line when unmock api
     estimate // TODO: remove this line when unmock api
   }
 }

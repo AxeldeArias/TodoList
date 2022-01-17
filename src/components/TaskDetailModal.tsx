@@ -26,6 +26,7 @@ const CurrentTaskModal = () => {
     updateCurrentTask
   } = useCurrentTask()
 
+  const [estimateValue, setEstimateValue] = useState(String(currentTask?.estimate))
   const [errors, setErrors] = useState(errorInitialValues)
 
   const validateForm = (callback: () => void) => {
@@ -38,10 +39,17 @@ const CurrentTaskModal = () => {
 
   useEffect(() => {
     if (currentTask) {
-      setErrors(errorInitialValues)
+      !!errors.title && setErrors(errorInitialValues)
     }
-  }, [currentTask])
-  const [estimateValue, setEstimateValue] = useState('')
+  }, [currentTask?.title])
+
+  useEffect(() => {
+    const estimateString = String(currentTask?.estimate)
+    if (estimateString !== estimateValue) {
+      setEstimateValue(estimateString)
+    }
+  }, [currentTask?.estimate])
+
   return (
     <Modal
       visible={!!currentTask}

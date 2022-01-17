@@ -6,9 +6,10 @@ type TaskState = 'IN_PROGRESS' | 'PLANNED' | 'COMPLETED' | undefined
 type TaskStateDropDownProps = {
   initialValue?: string,
   onChange: (value: TaskState) => void
+  disabled?: boolean
 }
 
-const TaskStateDropDown = ({ onChange, initialValue }: TaskStateDropDownProps) => {
+const TaskStateDropDown = ({ onChange, initialValue, disabled = false }: TaskStateDropDownProps) => {
   const [value, setValue] = useState<ValueType | null>(initialValue || null)
   const [taskOptions, setTaskOptions] = useState([
     { label: 'In Progress', value: 'IN_PROGRESS' },
@@ -20,6 +21,7 @@ const TaskStateDropDown = ({ onChange, initialValue }: TaskStateDropDownProps) =
 
   return (
   <DropDownPicker
+    disabled={disabled}
     listMode="SCROLLVIEW"
     scrollViewProps={{
       nestedScrollEnabled: true
