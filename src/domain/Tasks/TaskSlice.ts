@@ -6,12 +6,14 @@ import { createTask, deleteTask, getAllTasks, updateTask } from './TaskReducers'
 type State = {
   tasks: TaskItem[],
   loading: boolean,
+  gettingAllTasks: boolean,
   error: string,
 }
 
 export const taskSliceState: State = {
   tasks: [],
   loading: false,
+  gettingAllTasks: true,
   error: ''
 }
 
@@ -22,17 +24,17 @@ export const tasksSlice = createSlice({
   extraReducers: builder => {
     builder
       .addCase(getAllTasks.pending, state => {
-        state.loading = true
+        state.gettingAllTasks = true
       })
       .addCase(getAllTasks.fulfilled, (state, { payload }) => {
         return {
           ...state,
           tasks: payload,
-          loading: false
+          gettingAllTasks: false
         }
       })
       .addCase(getAllTasks.rejected, state => {
-        state.loading = false
+        state.gettingAllTasks = false
       })
       .addCase(createTask.pending, state => {
         state.loading = true

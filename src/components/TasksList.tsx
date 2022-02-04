@@ -1,5 +1,5 @@
-import React from 'react'
-import { StyleSheet, Text } from 'react-native'
+import React, { useEffect } from 'react'
+import { ActivityIndicator, StyleSheet, Text, View } from 'react-native'
 import useCurrentTask from '../domain/CurrentTask/useCurrentTask'
 import useTasksService from '../domain/Tasks/useTaskService'
 import Task from './Task'
@@ -9,8 +9,22 @@ const TasksList = () => {
 
   const {
     tasks,
-    loading
+    loading,
+    gettingAllTasks,
+    handleGetTasks
   } = useTasksService()
+
+  useEffect(() => {
+    handleGetTasks()
+  }, [])
+
+  if (gettingAllTasks) {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size={30} testID="Loading" />
+      </View>
+    )
+  }
 
   if (!tasks.length) {
     return <Text style={styles.emptyList}>{"You don't have any tasks"}</Text>
@@ -34,6 +48,11 @@ const TasksList = () => {
 }
 
 const styles = StyleSheet.create({
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
   emptyList: {
     fontSize: 14
   }

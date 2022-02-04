@@ -7,7 +7,7 @@ import useSuccess from '../Success/useSuccess'
 
 const useTasksService = () => {
   const dispatch = useAppDispatch()
-  const { loading, tasks } = useAppSelector(tasksSelector)
+  const { loading, gettingAllTasks, tasks } = useAppSelector(tasksSelector)
 
   const { openErrorModal } = useError()
   const { openSuccessModal } = useSuccess()
@@ -86,6 +86,7 @@ const useTasksService = () => {
   }
 
   return {
+    gettingAllTasks,
     loading,
     tasks,
     handleGetTasks,

@@ -1,10 +1,7 @@
 import React from 'react'
 import {
-  ActivityIndicator,
   SafeAreaView,
   StyleProp,
-  StyleSheet,
-  View,
   ViewStyle
 } from 'react-native'
 
@@ -14,15 +11,7 @@ type ScreenProps ={
   style?: StyleProp<ViewStyle>
 }
 
-const Screen = ({ children, loading, style }: ScreenProps) => {
-  if (loading) {
-    return (
-      <View style={styles.loadingContainer}>
-        <ActivityIndicator size={30} testID="Loading" />
-      </View>
-    )
-  }
-
+const Screen = ({ children, style }: ScreenProps) => {
   return (
    <SafeAreaView style={style}>
     {children}
@@ -30,11 +19,4 @@ const Screen = ({ children, loading, style }: ScreenProps) => {
   )
 }
 
-const styles = StyleSheet.create({
-  loadingContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
-})
 export default Screen

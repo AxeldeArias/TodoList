@@ -14,6 +14,7 @@ const sumEstimate = (prev: number, { estimate }: { estimate: number }) => {
 type TaskSummaryProps = {
   containerStyle?: StyleProp<ViewStyle>
 }
+
 const TaskSummary = ({ containerStyle }: TaskSummaryProps) => {
   const { tasks } = useTasksService()
 
